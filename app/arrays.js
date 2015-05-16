@@ -16,7 +16,9 @@ exports.arraysAnswers = {
   },
 
   sum : function(arr) {
-
+    return arr.reduce(function(acc, curr) {
+      return acc + curr;
+    })
   },
 
   remove : function(arr, item) {
