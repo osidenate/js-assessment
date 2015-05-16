@@ -50,7 +50,8 @@ exports.arraysAnswers = {
   },
 
   prepend : function(arr, item) {
-
+    arr.splice(0, 0, item);
+    return arr;
   },
 
   curtail : function(arr) {
