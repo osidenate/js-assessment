@@ -22,7 +22,9 @@ exports.arraysAnswers = {
   },
 
   remove : function(arr, item) {
-
+    return arr.filter(function(currentItem) {
+      return currentItem !== item;
+    })
   },
 
   removeWithoutCopy : function(arr, item) {
