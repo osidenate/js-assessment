@@ -24,11 +24,19 @@ exports.arraysAnswers = {
   remove : function(arr, item) {
     return arr.filter(function(currentItem) {
       return currentItem !== item;
-    })
+    });
   },
 
   removeWithoutCopy : function(arr, item) {
+    var index = arr.indexOf(item);
 
+    if (index === -1) {
+      return arr;
+    }
+
+    arr.splice(index, 1);
+
+    return this.removeWithoutCopy(arr, item);
   },
 
   append : function(arr, item) {
